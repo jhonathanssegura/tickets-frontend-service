@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Tickets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .navbar span {
+      color: red;
+    }
+
+    .sidebar {
+      display: flex;
+      background-color: #fff;
+      padding: 20px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      margin-right: 20px;
+      border: 3px solid #00bcd4;
+    }
+
+    .user-info {
+      font-size: 16px;
+    }
+
+    .user-info a {
+      color: #333;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      background-color: #00bcd4;
+      justify-content: space-around;
+      padding: 15px 0;
+    }
+
+    .menu a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    .menu a.active {
+      background-color: #026f85;
+      border-radius: 10px;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .ticket-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .ticket-table th,
+    .ticket-table td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .ticket-table th {
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .priority-low {
+      background-color: #4caf50;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    .footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .footer a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    Bienvenido, <span>admin</span>
+  </div>
+
+  <div class="sidebar">
+    <div class="avatar"></div>
+    <div class="user-info">
+      admin <br>
+      <a href="#">Mi Cuenta</a> | <a href="#">Cerrar sesión</a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="#">Panel</a>
+    <a href="#" class="active">Tickets</a>
+    <a href="#">Usuarios</a>
+    <a href="#">Artículo</a>
+    <a href="#">Staff</a>
+    <a href="#">Configuración</a>
+  </div>
+
+  <div class="content">
+    <h2>Mis Tickets</h2>
+    <p>Aquí puedes ver los tickets que tienes asignado.</p>
+
+    <button>Todos los Departamentos</button>
+
+    <table class="ticket-table">
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Título</th>
+          <th>Prioridad</th>
+          <th>Departamento</th>
+          <th>Autor</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#783706</td>
+          <td>Ayuda con el sistema web</td>
+          <td><span class="priority-low">Baja</span></td>
+          <td>Help and Support</td>
+          <td>Joaquin Obed Alvarado</td>
+          <td>07 Feb 2018</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Developed by <span style="color: red;">Jhonathan Salas </span>
+  </div>
+
+  <script type="module" src="dist/main.js"></script>
+</body>
+</html>
